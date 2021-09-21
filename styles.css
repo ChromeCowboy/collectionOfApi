@@ -127,16 +127,25 @@ header {
   width: 80vw;
   cursor: pointer;
 }
+.intro {
+  border: 10px solid var(--clr-complimentary-2);
+  border-radius: var(--border-radius);
+  background-color: var(--clr-primary-0);
+  margin-bottom: 1rem;
+}
 .main-title {
   font-weight: var(--font-weight);
-  background-color: var(--clr-primary-0);
   color: var(--clr-complimentary);
   padding: 1rem;
   display: grid;
   place-items: center;
   text-align: center;
-  border-radius: var(--border-radius);
-  border: 10px solid var(--clr-complimentary-2);
+  margin-bottom: 0;
+  padding-bottom: 0.5rem;
+}
+.collection {
+  color: var(--clr-complimentary);
+  text-align: center;
 }
 main {
   min-height: 80vh;
