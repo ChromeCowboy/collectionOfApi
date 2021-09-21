@@ -1,0 +1,277 @@
+/* 
+= = = = = = = = = = =
+FONTS 
+= = = = = = = = = = =
+ */
+
+@import url("https://fonts.googleapis.com/css2?family=Martel:wght@200;300;400;600;700;800&display=swap");
+
+/* 
+ = = = = = = = = = = =
+ VARIABLES 
+ = = = = = = = = = = =
+ */
+:root {
+  /* DARK SHADES */
+  --clr-primary-0: hsl(205, 80%, 98%);
+  --clr-primary-1: hsl(205, 80%, 92%);
+  --clr-primary-2: hsl(205, 78%, 84%);
+  --clr-primary-3: hsl(205, 79%, 76%);
+  --clr-primary-4: hsl(205, 78%, 68%);
+  /* MAIN COLOR */
+  --clr-primary-5: #49a6e9;
+  /* LIGHT SHADES */
+  --clr-primary-6: hsl(205, 78%, 60%);
+  --clr-primary-7: hsl(205, 53%, 48%);
+  --clr-primary-8: hsl(205, 52%, 36%);
+  --clr-primary-9: hsl(205, 53%, 24%);
+  /* BLACK WHITE  */
+  --clr-primary-white: white;
+  --clr-primary-black: black;
+  /* COMPLIMENTARY COLOR  */
+  --clr-complimentary: hsl(180, 74%, 49%);
+  --clr-complimentary-2: hsl(180, 70%, 79%);
+
+  --clr-purple: hsl(301, 53%, 60%);
+  /* FONT  */
+  --clr-primary-font: ;
+  /* FONT AWESOME ICONS  */
+  --book: "fas fa-book";
+  /* FONT  */
+  --font-primary: "Martel";
+  --font-weight: 700;
+  /* FONT SPACING  */
+  --spacing: 0.1rem;
+  /* RADIUS  */
+  --border-radius: 0.5rem;
+  /* TRANSITION  */
+  --transition: all 0.2s linear;
+}
+
+/* 
+= = = = = = = = = = =
+GLOBAL STYLES
+= = = = = = = = = = =
+ */
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: var(--font-primary);
+  background: linear-gradient(var(--clr-primary-9), white);
+
+  color: var(--clr-primary-9);
+  line-height: 1.5;
+  font-size: 0.875rem;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style-type: none;
+}
+h1,
+h2,
+h3 {
+  letter-spacing: var(--spacing);
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+  font-family: var(--clr-primary-font);
+}
+
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
+
+p {
+  font-size: 0.7rem;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.25rem;
+  color: var(--clr-primary-black);
+}
+
+/* 
+= = = = = = = = = = =
+GLOBAL CLASSES
+= = = = = = = = = = =
+ */
+
+header {
+  min-height: 7rem;
+  margin: 1rem 1rem 0 1rem;
+}
+.shuffle {
+  color: var(--clr-primary-white);
+  background: var(--clr-purple);
+  width: 63vw;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+.shuffle:hover {
+  background: red;
+}
+
+.emptyRandom {
+  width: 80vw;
+  cursor: pointer;
+}
+.main-title {
+  font-weight: var(--font-weight);
+  background-color: var(--clr-primary-0);
+  color: var(--clr-complimentary);
+  padding: 1rem;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  border-radius: var(--border-radius);
+  border: 10px solid var(--clr-complimentary-2);
+}
+main {
+  min-height: 80vh;
+  display: grid;
+  place-items: center;
+}
+.inside-card {
+  border: 6px solid var(--clr-complimentary);
+  background-color: var(--clr-primary-white);
+  border-radius: var(--border-radius);
+  height: 12vh;
+  min-height: 9rem;
+  padding: 1rem;
+  margin: 1rem;
+  cursor: pointer;
+}
+.inside-card:hover {
+  transition: var(--transition);
+  background-color: var(--clr-primary-1);
+}
+.card {
+  width: 90vw;
+  max-width: 1170px;
+  margin: 1rem auto;
+  padding: 1rem;
+  background-color: var(--clr-primary-4);
+  border: 2px solid var(--clr-primary-8);
+  border-radius: var(--border-radius);
+}
+.link-title {
+  color: var(--clr-primary-9);
+  font-size: 1rem;
+}
+.item {
+  border: 1px solid var(--clr-primary-black);
+}
+/* 
+= = = = = = = = = = =
+DROPDOWN MENU
+= = = = = = = = = = =
+ */
+#list-label {
+  padding: 0.5rem;
+}
+nav {
+  height: 2.4rem;
+}
+
+ul {
+  background: var(--clr-primary-7);
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+li {
+  color: #fff;
+  background: var(--clr-primary-7);
+  display: block;
+  float: left;
+  padding: 0 1rem;
+  position: relative;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+li a {
+  color: #fff;
+  font-size: 0.75rem;
+}
+
+li:hover {
+  background: red;
+  cursor: pointer;
+}
+
+ul li ul {
+  background: var(--clr-primary-7);
+  visibility: hidden;
+  opacity: 0;
+  min-width: 5rem;
+  position: absolute;
+  transition: var(--transition);
+  margin-top: 0.5rem;
+  left: 0;
+  display: none;
+}
+
+ul li:hover > ul,
+ul li ul:hover {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+}
+
+ul li ul li {
+  clear: both;
+  width: 100%;
+}
+
+@media (min-width: 550px) {
+  p {
+    font-size: 0.85rem;
+  }
+}
+
+@media (min-width: 800px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+  body {
+    font-size: 1rem;
+  }
+  h1,
+  h2,
+  h3 {
+    line-height: 1;
+  }
+  p {
+    font-size: 1rem;
+    margin: 1rem;
+  }
+  label {
+    color: var(--clr-primary-white);
+  }
+  .inside-card {
+    min-height: 8rem;
+  }
+  .link-title {
+    font-size: 1.25rem;
+  }
+}
