@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API COLLECTION</title>
+    <link rel="stylesheet" href="styles.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+  />
+</head>
+<body>
+    <header>
+        <h1 class="main-title">API POOL</h1>
+        <nav role="navigation">
+            <ul class="dropdownList">
+                <li id="list-label"><a href="#">( A-Z )</a>
+                    <ul class="dropdown">
+                        <li class="item"><a href="">Something went wrong</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <!-- RANDOM API CONTAINER -->
+        <div class="containerEmpty">
+          <div class="emptyRandom">
+            <div class="inside-card">
+                <h3 class="link-title" id="${randomAPI}">CLICK BUTTON FOR RANDOM API</h3>
+                <p></p>
+              </div> 
+          </div>
+        </div>
+        <!-- LIST OF API'S -->
+        <div class="container">
+            <button type="button" id="random" class="shuffle">CLICK ME FOR RANDOM API</button>
+          
+            <div class="card">
+                <div class="inside-card">
+                    <h3 class="link-title">Axolotl</h3>
+                    <p>Description: Collection of axolotl pictures and facts</p>
+                </div>
+                <div class="inside-card">
+                    <h3 class="link-title">Cat Facts</h3>
+                    <p>Description: Daily cat facts</p>
+                </div>
+                <div class="inside-card">
+                    <h3 class="link-title">Cataas</h3>
+                    <p>Description: Cat as a service (cats pictures and gifs)</p>
+                </div>
+                <div class="inside-card">
+                    <h3 class="link-title">CatAPI</h3>
+                    <p>Description: Random pictures of cats</p>
+                </div>
+                <div class="inside-card">
+                    <h3 class="link-title">Cats</h3>
+                    <p>Description: Pictures of cats from Tumblr</p>
+                </div>
+                <div class="inside-card">
+                    <h3 class="link-title">Dog Facts</h3>
+                    <p>Description: Random dog facts</p>
+                </div>
+                <div class="inside-card">
+                    <h3 class="link-title">Dogs</h3>
+                    <p>Description: Based on the Stanford Dogs Dataset</p>
+                </div>
+
+            </div>    
+        </div>
+    </main>
+    
+    <script src="app.js"></script>
+</body>
+</html>
+
