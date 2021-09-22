@@ -33,6 +33,7 @@ FONTS
   --clr-complimentary-2: hsl(180, 70%, 79%);
 
   --clr-purple: hsl(301, 53%, 60%);
+  --clr-red: hsl(0, 93%, 52%);
   /* FONT  */
   --clr-primary-font: ;
   /* FONT AWESOME ICONS  */
@@ -246,12 +247,39 @@ ul li ul li {
   width: 100%;
 }
 
+/* 
+= = = = = = = = = = =
+BACK TO TOP BUTTON
+= = = = = = = = = = =
+ */
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  right: 50px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: var(--clr-red);
+  color: var(--clr-primary-white);
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 18px;
+  font-family: var(--font-primary);
+}
+#myBtn:hover {
+  background-color: #555;
+}
+.back-to-top::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f062";
+}
 @media (min-width: 550px) {
   p {
     font-size: 0.85rem;
   }
 }
-
 @media (min-width: 800px) {
   h1 {
     font-size: 4rem;

@@ -82,7 +82,7 @@ const init = async () => {
         const { API: api, Description: description, Link: link } = entryItem;
 
         return `
-          <div onclick="window.open('${link}','_blank')" class="inside-card">
+          <div onclick="window.open('${link}')" class="inside-card">
             <h3 class="link-title" id="${api}">${api}</h3>
             <p>Description: ${description}</p>
           </div>
@@ -96,3 +96,56 @@ const init = async () => {
 };
 
 window.addEventListener("DOMContentLoaded", init());
+
+// = = = = = = = = = = =
+// SCROLL TO TOP BUTTON
+// = = = = = = = = = = =
+
+const mybutton = document.getElementById("myBtn");
+
+function scrollFunction() {
+  if (
+    document.body.scrollTop > 1000 ||
+    document.documentElement.scrollTop > 1000
+  ) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+document.addEventListener("scroll", scrollFunction);
+
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+
+mybutton.addEventListener("click", topFunction);
+
+// = = = = = = = = = =
+// SCROLL ABOVE LINK
+// = = = = = = = = = =
+
+const offsetAnchor = () => {
+  if (location.hash.length !== 0) {
+    window.scrollTo(window.scrollX, window.scrollY - 30);
+  }
+};
+
+const anchors = document.querySelectorAll('a[href^="#"]');
+
+for (const a of anchors) {
+  a.addEventListener("click", (event) => {
+    window.setTimeout(() => {
+      offsetAnchor();
+    }, 0);
+  });
+}
+
+document.addEventListener("click", (event) => {
+  window.setTimeout(() => {
+    offsetAnchor();
+  }, 0);
+});
+
+window.setTimeout(offsetAnchor, 0);
